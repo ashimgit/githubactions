@@ -9,7 +9,8 @@
 name: Reusable workflow
 
 on:
-  workflow_call:
+  repository_dispatch:
+    types: [trigger-secondary-workflow]
 
 
 jobs:
