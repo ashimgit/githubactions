@@ -6,13 +6,11 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Reusable workflow
 
 on:
-  push:
-    branches: [ "initial-phase" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
+
 
 jobs:
   build:
