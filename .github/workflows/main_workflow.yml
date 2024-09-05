@@ -20,10 +20,10 @@ jobs:
 #    uses: ./.github/workflows/reusable_workflow.yml
 #    ## with some input
   steps:
-    - id: hello-print
-      name: Run a job
-      run: |
-        echo "Running main workflow"
+#    - id: hello-print
+#      name: Run a job
+#      run: |
+#        echo "Running main workflow"
 
     - name: Determine condition
       id: determine_condition
