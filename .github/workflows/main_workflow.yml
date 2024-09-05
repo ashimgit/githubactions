@@ -21,7 +21,8 @@ jobs:
 #    ## with some input
   steps:
     - name: Run a job
-      run: echo "Running main workflow"
+      run: |
+        echo "Running main workflow"
 
     - name: Determine condition
       id: determine_condition
