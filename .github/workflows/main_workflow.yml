@@ -15,30 +15,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-#  call-reusable-workflow:
-#    if: ${{ github.event_name=='push' && github.ref == 'refs/heads/initial-phase'}}
-#    uses: ./.github/workflows/reusable_workflow.yml
+  call-reusable-workflow:
+    if: ${{ github.event_name=='push' && github.ref == 'refs/heads/initial-phase'}}
+    uses: ./.github/workflows/reusable_workflow.yml
 #    ## with some input
-  steps:
-#    - id: hello-print
-#      name: Run a job
-#      run: |
-#        echo "Running main workflow"
-
-    - name: Determine condition
-      id: determine_condition
-      run: |
-        # Example condition: Set condition based on some logic
-        if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-          echo "condition=true" >> $GITHUB_ENV
-        else
-          echo "condition=false" >> $GITHUB_ENV
-        fi
-    - name: Trigger secondary workflow
-      if: env.condition == 'true'
-      run: |
-        curl -X POST \
-        -H "Authorization: token ${{ secrets.GH_WF_TOKEN }}" \
-        -H "Accept: application/vnd.github.v3+json" \
-        -d '{"event_type": "trigger-secondary-workflow", "client_payload": {"ref": "${{ github.ref }}"}}' \
-        https://api.github.com/repos/${{ github.repository }}/dispatches
