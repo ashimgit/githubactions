@@ -21,6 +21,7 @@ jobs:
 #    ## with some input
   steps:
     - name: Run a job
+      id: init-print
       run: |
         echo "Running main workflow"
 
