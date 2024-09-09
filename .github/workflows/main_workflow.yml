@@ -25,7 +25,8 @@ jobs:
 #    uses: ./.github/workflows/reusable_workflow.yml
 #    ## with some input
   project-build:
-    runs-on: self-hosted
+    runs-on: ashim-gh-runner
+#    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v4
