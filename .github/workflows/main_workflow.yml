@@ -25,7 +25,7 @@ jobs:
 #    uses: ./.github/workflows/reusable_workflow.yml
 #    ## with some input
   project-build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v4
