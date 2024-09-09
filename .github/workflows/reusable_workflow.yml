@@ -8,12 +8,12 @@
 
 name: Reusable workflow
 
-on:
+#on:
 #  workflow_call:
 
-  on:
-    push:
-      branches: [ "initial-phase" ]
+on:
+  push:
+    branches: [ "initial-phase" ]
 
 
 jobs:
