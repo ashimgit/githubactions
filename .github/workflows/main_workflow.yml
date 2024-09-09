@@ -8,9 +8,9 @@
 
 name: Main workflow
 
-#on:
-#  push:
-#    branches: [ "initial-phase" ]
+on:
+  push:
+    branches: [ "initial-phase" ]
 #  pull_request:
 #    branches: [ "main" ]
 
