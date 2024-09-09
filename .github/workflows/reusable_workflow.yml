@@ -9,7 +9,11 @@
 name: Reusable workflow
 
 on:
-  workflow_call:
+#  workflow_call:
+
+  on:
+    push:
+      branches: [ "initial-phase" ]
 
 
 jobs:

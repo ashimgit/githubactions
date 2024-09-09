@@ -8,11 +8,11 @@
 
 name: Main workflow
 
-on:
-  push:
-    branches: [ "initial-phase" ]
-  pull_request:
-    branches: [ "main" ]
+#on:
+#  push:
+#    branches: [ "initial-phase" ]
+#  pull_request:
+#    branches: [ "main" ]
 
 jobs:
   call-reusable-workflow:
